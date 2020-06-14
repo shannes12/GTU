@@ -33,10 +33,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jumpbox  | Gateway  | 10.0.0.4   | Linux            |
+| DVMA-VM1 |Web Server| 10.0.0.5   | Linux            |
+| DVMA-VM2 |Web Server| 10.0.0.6   | Linux            |
+| ElkServer|ElkServer | 10.0.0.7   | Linux            |
 
 ### Access Policies
 
@@ -52,10 +52,14 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box |      Yes            |whitelist IP addresses
 
+|DVMA-VM1  |      Yes            |Any Ip Addresses.     |
+|DVMA-VM2  |      Yes            |Any Ip Addresses.     |
+|Elk-Server|      Yes            |10.0.0.4                      |
+                                  10.0.0.5
+                                  10.0.0.6
+                                  10.0.0.7
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
